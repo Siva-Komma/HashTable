@@ -11,9 +11,24 @@ namespace HashTable
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Hash Table");
-            //string paragraph = "To be or not to be";
-            string paragraph = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
-            CountNumbOfOccurence(paragraph);
+            Console.WriteLine("Choose your option");
+            Console.WriteLine("1.Hash Table\n2.Binary Search tree");
+            int option = Convert.ToInt32(Console.ReadLine());
+            switch (option)
+            {
+                case 1:
+                    //string paragraph = "To be or not to be";
+                    string paragraph = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+                    CountNumbOfOccurence(paragraph);
+                    break;
+                case 2:
+                    Console.WriteLine("Binary Search Tree");
+                    BinarySearchTree<int> binarySearchTree = new BinarySearchTree<int>(56);
+                    binarySearchTree.Insert(30);
+                    binarySearchTree.Insert(70);
+                    binarySearchTree.Display();
+                    break;
+            }
             Console.ReadLine();
         }
         public static void CountNumbOfOccurence(string paragraph)
