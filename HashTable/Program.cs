@@ -31,6 +31,10 @@ namespace HashTable
             }
             Console.WriteLine("Displaying after add operation");
             hashTabe.Display();
+            string s = "avoidable";
+            hashTabe.Remove(s);
+            Console.WriteLine("\nAfter removed avoidable word from the phrase {0}", s);
+            hashTabe.Display();
         }
     }
 }
